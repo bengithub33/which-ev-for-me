@@ -39,9 +39,10 @@ const arrayFromNodes = nodes => {
 
 const carObjFromElement = element => {
   const obj = {
+    year: element.querySelector(".title span:nth-child(1)").innerHTML,
     brand: element.querySelector(".title span:nth-child(1)").innerHTML,
     model: element.querySelector(".title span:nth-child(2)").innerHTML,
-    availableNow: element.querySelector(".not-current") === null,
+    variationone: element.querySelector(".title span:nth-child(2)").innerHTML,
     range: element.querySelector(".specs p:nth-child(3) span:nth-child(2)")
     .innerHTML,
     batteryKwh: element.querySelector(".battery").innerHTML,
