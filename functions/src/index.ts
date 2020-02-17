@@ -60,8 +60,10 @@ const getDistance = (from: Place, to: Place) => {
 }
 
 type Vehicle = {
+  year: number,
   brand: string,
   model: string,
+  variationone: string,
   rangeMi: number,
   seats: number,
   priceUsd: number,
@@ -72,7 +74,7 @@ const getAllVehicles = async (): Promise<Vehicle[]> => {
   const records = await base('imported3').select({
     // Selecting the first 3 records in Grid view:
     maxRecords: 100,
-    fields: ['brand', 'model', 'rangeMi', 'seats', 'priceUsd', 'availableNow'],
+    fields: ['year', 'brand', 'model', 'variationone', 'rangeMi', 'seats', 'priceUsd', 'availableNow'],
   }).all();
   return records.map(r => r.fields as Vehicle);
 }
