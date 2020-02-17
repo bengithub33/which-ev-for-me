@@ -10,7 +10,7 @@ let airtable = new Airtable({
   endpointUrl: 'https://api.airtable.com',
   apiKey: AIRTABLE_API_KEY
 });
-const base = airtable.base('appMp4kjoOG8P6axH');
+const base = airtable.base('appLnojlnzuucMVkW');
 
 
 // // Start writing Firebase Functions
